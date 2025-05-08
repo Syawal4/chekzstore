@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - CHEKZSTORE</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Alpine JS -->
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Navbar Start -->
+    <nav class="navbar" x-data>
+      <a href="#" class="navbar-logo">Chekz<span>store</span></a>
+
+      <div class="navbar-menu">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="product.html">Product</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <div class="navbar-extra">
+        <a href="#" id="search">
+          <svg class="search">
+            <use href="assets/img/feather-sprite.svg#search" />
+          </svg>
+        </a>
+        <a href="#" id="shopping-cart-button">
+          <svg class="cart">
+            <use href="assets/img/feather-sprite.svg#shopping-cart" />
+          </svg>
+          <span
+            class="quantity-badge"
+            x-show="$store.cart.quantity"
+            x-text="$store.cart.quantity"
+          ></span>
+        </a>
+
+        <div class="shopping-cart">
+          <template x-for="(item, index) in $store.cart.items" :key="index">
+            <div class="cart-item">
+              <img
+                :src="`assets/img/product-unggulan/${item.img}`"
+                :alt="item.name"
+              />
+              <div class="item-detail">
+                <h3 x-text="item.name"></h3>
+                <div class="item-price">
+                  <span x-text="rupiah(item.price)"></span> &times;
+                  <button id="remove" @click="$store.cart.remove(item.id)">
+                    &minus;
+                  </button>
+                  <span x-text="item.quantity"></span>
+                  <button id="add" @click="$store.cart.add(item)">
+                    &plus;
+                  </button>
+                  &equals;
+                  <span x-text="rupiah(item.total)"></span>
+                </div>
+              </div>
+            </div>
+          </template>
+          <div class="cart-empty" x-show="!$store.cart.items.length">
+            <h3>Keranjang Kosong</h3>
+            <a href="#product" class="btn-continue" id="continue-button">
+              Mulai Belanja
+            </a>
+          </div>
+          <div class="cart-full" x-show="$store.cart.items.length">
+            <h4>Total : <span x-text="rupiah($store.cart.total)"></span></h4>
+
+            <div class="form-container">
+              <form action="" id="checkoutForm">
+                <h5>Customer Detail</h5>
+
+                <label for="name">
+                  <span>Name</span>
+                  <input type="text" name="name" id="name" />
+                </label>
+
+                <label for="email">
+                  <span>Email</span>
+                  <input type="email" name="email" id="email" />
+                </label>
+
+                <label for="phone">
+                  <span>Phone</span>
+                  <input
+                    type="number"
+                    name="phone"
+                    id="phone"
+                    autocomplete="off"
+                  />
+                </label>
+
+                <button
+                  class="checkout-button disabled"
+                  type="submit"
+                  id="checkout-button"
+                  value="checkout"
+                >
+                  Checkout
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" id="menu-button">
+          <svg class="menu">
+            <use href="assets/img/feather-sprite.svg#menu" />
+          </svg>
+        </a>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- About Section Start -->
+    <section class="about" id="about">
+      <h2>Tentang Kami</h2>
+
+      <div class="about-content">
+        <p>
+          Selamat datang di Chekzstore, rumah bagi keharuman yang memikat dan
+          menggugah rasa percaya diri. Kami percaya bahwa parfum bukan hanya
+          sekadar aroma, tetapi juga bentuk ekspresi diri yang halus dan
+          bermakna. Melalui berbagai pilihan aroma, kami membantu Anda menemukan
+          wangi khas yang mewakili karakter dan gaya hidup Anda.
+        </p>
+        <p>
+          Chekzstore hadir dengan komitmen untuk menyediakan produk parfum
+          berkualitas tinggi, asli, dan terjangkau. Setiap parfum yang kami
+          tawarkan telah dipilih secara cermat agar memenuhi selera beragam
+          pelanggan, baik pria maupun wanita, dari aroma floral yang lembut
+          hingga aroma woody yang maskulin.
+        </p>
+        <p>
+          Kami percaya bahwa pengalaman berbelanja parfum harus menyenangkan dan
+          mudah. Oleh karena itu, kami tidak hanya fokus pada kualitas produk,
+          tetapi juga memberikan pelayanan pelanggan yang ramah, pengemasan
+          aman, dan pengiriman cepat ke seluruh Indonesia.
+        </p>
+        <p>
+          Chekzstore bukan sekadar toko, melainkan bagian dari gaya hidup Anda.
+          Kami ingin setiap aroma yang Anda pilih dari Chekzstore mampu
+          meninggalkan kesan mendalam dan meningkatkan rasa percaya diri Anda
+          dalam setiap kesempatan.
+        </p>
+        <p>
+          Terima kasih telah mempercayai Chekzstore sebagai sahabat aroma
+          pilihan Anda. Jelajahi koleksi kami dan temukan wewangian yang paling
+          mencerminkan siapa Anda.
+        </p>
+      </div>
+    </section>
+    <!-- About Section End -->
+
+    <!-- Footer Start -->
+    <footer class="footer-container">
+      <div class="socials">
+        <a href="#">
+          <svg class="instagram">
+            <use href="assets/img/feather-sprite.svg#instagram" />
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="twitter">
+            <use href="assets/img/feather-sprite.svg#twitter" />
+          </svg>
+        </a>
+        <a href="#">
+          <svg class="facebook">
+            <use href="assets/img/feather-sprite.svg#facebook" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="links">
+        <a href="index.html">Home Page</a>
+        <a href="about.html">About Us</a>
+        <a href="product.html">All Product</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+
+      <div class="credit">
+        <p>&copy; 2025 Chekzstore. Hak cipta dilindungi.</p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- App JS -->
+    <script src="assets/src/app.js"></script>
+
+    <!-- JS -->
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
