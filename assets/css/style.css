@@ -809,6 +809,10 @@ footer {
     max-width: 90%;
   }
 
+  .products .row {
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  }
+
   .contact-form {
     padding: 0 1.4rem;
   }
