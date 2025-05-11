@@ -61,7 +61,7 @@ html {
 }
 
 .navbar svg .menu {
-  display: none;
+  color: rgba(0, 0, 0, 0);
 }
 
 .navbar .navbar-menu a:hover {
