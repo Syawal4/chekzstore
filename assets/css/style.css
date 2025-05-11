@@ -60,7 +60,7 @@ html {
   margin: 0 0.5rem;
 }
 
-.navbar .menu svg {
+.navbar svg .menu {
   display: none;
 }
 
