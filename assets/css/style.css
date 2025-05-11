@@ -821,7 +821,7 @@ footer {
 /* Mobile Phone */
 @media (max-width: 450px) {
   html {
-    font-size: 60%;
+    font-size: 45%;
   }
 
   .navbar .navbar-menu {
