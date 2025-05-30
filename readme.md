@@ -1,63 +1,28 @@
-# Budget Buddy
+# ChekzStore 🛒
 
-_Budget Buddy_ adalah aplikasi web sederhana untuk membantu pengguna mencatat pemasukan dan pengeluaran harian, serta memvisualisasikan kondisi keuangan mereka dengan grafik. Cocok untuk pelajar maupun siapa pun yang ingin belajar mengelola keuangan secara mandiri.
-
----
-
-## Fitur Utama
-
-- Tambah transaksi: pilih pemasukan atau pengeluaran
-- Hitung saldo otomatis berdasarkan data
-- Tampilkan grafik perbandingan (Pie Chart)
-- Simpan data di browser dengan LocalStorage
-- Export data ke file .json
+Website toko online sederhana buatan saya, **Syawal**.
 
 ---
 
-## Tampilan Aplikasi
+## 🚀 Fitur
 
-![Tampilan Budget Buddy](tampilan-budget-buddy.jpeg)  
-Tampilan utama Budget Buddy
-
----
-
-## Cara Menjalankan
-
-1. Buka file index.html di browser
-2. Isi form transaksi: nama, jumlah, dan tipe transaksi
-3. Klik _Tambah_ → transaksi akan muncul di daftar
-4. Grafik dan total saldo akan diperbarui otomatis
+- Halaman Tentang
+- Halaman Produk
+- Halaman Kontak
+- Keranjang Belanja
 
 ---
 
-## Teknologi
+## 💻 Cara Menjalankan
 
-- HTML, CSS, JavaScript
-- Chart.js (grafik keuangan)
-- LocalStorage (penyimpanan data lokal)
+Cukup buka file `index.html` di browser, atau akses langsung melalui domain hosting:
 
----
-
-## Live Demo
-
-Akses versi online-nya di sini:  
-**[ https://annuralmunawarah16.github.io/budget-buddy/](https://annuralmunawarah16.github.io/budget-buddy/)**
+👉 [🔗 Kunjungi Website ChekzStore](https://chekzstore.cdcdisdiksulsel.info/)
 
 ---
 
-## Struktur Folder
+## ✍️ Author
 
-budget-buddy/
-├── index.html
-├── style.css
-├── script.js
-├── tampilan-budget-buddy.jpeg
-└── README.md
-
----
-
-## Lisensi
-
-Proyek ini open-source untuk keperluan edukasi dan pengembangan pribadi.
-
----
+**Syawal**  
+Pelajar SMA | Web Developer Pemula  
+📫 [GitHub](https://github.com/Syawal4)
