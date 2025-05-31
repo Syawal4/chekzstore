@@ -16,6 +16,7 @@
 }
 
 body {
+  height: 100%;
   font-family: "Poppins", sans-serif;
   background-color: var(--white);
   color: var(--blue-font);
@@ -768,7 +769,7 @@ footer {
     font-size: 62.5%;
   }
 
-  #menu {
+  #menu-button {
     display: inline-block;
   }
 
