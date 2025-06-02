@@ -39,7 +39,7 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search">
+        <a href="#" id="search-button">
           <svg class="search">
             <use href="assets/img/feather-sprite.svg#search" />
           </svg>
@@ -77,9 +77,9 @@
             </div>
           </template>
           <div class="cart-empty" x-show="!$store.cart.items.length">
-            <h3>Keranjang Kosong</h3>
+            <h3>Cart is Empty</h3>
             <a href="#product" class="btn-continue" id="continue-button">
-              Mulai Belanja
+              Start Shopping
             </a>
           </div>
           <div class="cart-full" x-show="$store.cart.items.length">
@@ -128,13 +128,24 @@
           </svg>
         </a>
       </div>
+
+      <!-- Search Form Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box">
+          <svg class="search">
+            <use href="assets/img/feather-sprite.svg#search" />
+          </svg>
+        </label>
+      </div>
+      <!-- Search Form End -->
     </nav>
     <!-- Navbar End -->
 
     <!-- Product Section Start -->
     <section class="all-product">
       <div class="products" id="products" x-data="allProduct">
-        <h2>Koleksi Parfum</h2>
+        <h2>Fragrance</h2>
         <div class="row">
           <template x-for="(item, index) in items" :key="index">
             <div class="product-card">
@@ -193,7 +204,7 @@
                 <svg class="btn-add-cart">
                   <use href="assets/img/feather-sprite.svg#shopping-cart" />
                 </svg>
-                Tambah ke Keranjang
+                Add to Cart
               </a>
             </div>
           </div>
@@ -206,17 +217,20 @@
     <!-- Footer Start -->
     <footer class="footer-container">
       <div class="socials">
-        <a href="#">
+        <a
+          href="https://instagram.com/sywaall_"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg class="instagram">
             <use href="assets/img/feather-sprite.svg#instagram" />
           </svg>
         </a>
-        <a href="#">
-          <svg class="twitter">
-            <use href="assets/img/feather-sprite.svg#twitter" />
-          </svg>
-        </a>
-        <a href="#">
+        <a
+          href="https://facebook.com/sya.047"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg class="facebook">
             <use href="assets/img/feather-sprite.svg#facebook" />
           </svg>
@@ -231,7 +245,7 @@
       </div>
 
       <div class="credit">
-        <p>&copy; 2025 Chekzstore. Hak cipta dilindungi.</p>
+        <p>&copy; 2025 Chekzstore. All Rights Reserved.</p>
       </div>
     </footer>
     <!-- Footer End -->

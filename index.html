@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CHEKZSTORE | Perfume Online Shop</title>
+    <title>CHEKZSTORE | Fragrance Online Shop</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,7 +39,7 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search">
+        <a href="#" id="search-button">
           <svg class="search">
             <use href="assets/img/feather-sprite.svg#search" />
           </svg>
@@ -77,9 +77,9 @@
             </div>
           </template>
           <div class="cart-empty" x-show="!$store.cart.items.length">
-            <h3>Keranjang Kosong</h3>
+            <h3>Cart is Empty</h3>
             <a href="#product" class="btn-continue" id="continue-button">
-              Mulai Belanja
+              Start Shopping
             </a>
           </div>
           <div class="cart-full" x-show="$store.cart.items.length">
@@ -128,6 +128,17 @@
           </svg>
         </a>
       </div>
+
+      <!-- Search Form Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box">
+          <svg class="search">
+            <use href="assets/img/feather-sprite.svg#search" />
+          </svg>
+        </label>
+      </div>
+      <!-- Search Form End -->
     </nav>
     <!-- Navbar End -->
 
@@ -136,15 +147,15 @@
       <div class="home">
         <div class="home-box">
           <main class="content">
-            <h1>Temukan Aroma Terbaik di <span>Chekzstore</span></h1>
-            <p>Koleksi parfum berkualitas untuk wangi sepanjang hari.</p>
-            <a href="product.html" class="cta">Belanja Sekarang</a>
+            <h1>Find the Best Fragrance at <span>Chekzstore</span></h1>
+            <p>A collection of quality perfumes for all-day fragrance.</p>
+            <a href="product.html" class="cta">Shop Now</a>
           </main>
         </div>
       </div>
 
       <div class="products" id="products" x-data="productUnggulan">
-        <h2 class="product-unggulan">Koleksi Parfum Unggulan</h2>
+        <h2 class="product-unggulan">Recommended Perfume</h2>
         <div class="row">
           <template x-for="(item, index) in items" :key="index">
             <div class="product-card">
@@ -209,7 +220,7 @@
                 <svg class="btn-add-cart">
                   <use href="assets/img/feather-sprite.svg#shopping-cart" />
                 </svg>
-                Tambah ke Keranjang
+                Add to Cart
               </a>
             </div>
           </div>
@@ -217,7 +228,7 @@
       </div>
 
       <div class="to-all-product">
-        <a href="product.html" class="cta">Lihat semua</a>
+        <a href="product.html" class="cta">All product</a>
       </div>
     </section>
     <!-- Home Section End -->
@@ -225,17 +236,20 @@
     <!-- Footer Start -->
     <footer class="footer-container">
       <div class="socials">
-        <a href="#">
+        <a
+          href="https://instagram.com/sywaall_"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg class="instagram">
             <use href="assets/img/feather-sprite.svg#instagram" />
           </svg>
         </a>
-        <a href="#">
-          <svg class="twitter">
-            <use href="assets/img/feather-sprite.svg#twitter" />
-          </svg>
-        </a>
-        <a href="#">
+        <a
+          href="https://facebook.com/sya.047"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg class="facebook">
             <use href="assets/img/feather-sprite.svg#facebook" />
           </svg>
@@ -250,7 +264,7 @@
       </div>
 
       <div class="credit">
-        <p>&copy; 2025 Chekzstore. Hak cipta dilindungi.</p>
+        <p>&copy; 2025 Chekzstore. All Rights Reserved.</p>
       </div>
     </footer>
     <!-- Footer End -->

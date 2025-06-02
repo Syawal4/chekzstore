@@ -39,7 +39,7 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search">
+        <a href="#" id="search-button">
           <svg class="search">
             <use href="assets/img/feather-sprite.svg#search" />
           </svg>
@@ -77,9 +77,9 @@
             </div>
           </template>
           <div class="cart-empty" x-show="!$store.cart.items.length">
-            <h3>Keranjang Kosong</h3>
+            <h3>Cart is Empty</h3>
             <a href="#product" class="btn-continue" id="continue-button">
-              Mulai Belanja
+              Start Shopping
             </a>
           </div>
           <div class="cart-full" x-show="$store.cart.items.length">
@@ -128,44 +128,68 @@
           </svg>
         </a>
       </div>
+
+      <!-- Search Form Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box">
+          <svg class="search">
+            <use href="assets/img/feather-sprite.svg#search" />
+          </svg>
+        </label>
+      </div>
+      <!-- Search Form End -->
     </nav>
     <!-- Navbar End -->
 
     <!-- About Section Start -->
     <section class="about" id="about">
-      <h2>Tentang Kami</h2>
+      <h2>About Us</h2>
 
       <div class="about-content">
         <p>
-          Selamat datang di Chekzstore, rumah bagi keharuman yang memikat dan
-          menggugah rasa percaya diri. Kami percaya bahwa parfum bukan hanya
-          sekadar aroma, tetapi juga bentuk ekspresi diri yang halus dan
-          bermakna. Melalui berbagai pilihan aroma, kami membantu Anda menemukan
-          wangi khas yang mewakili karakter dan gaya hidup Anda.
+          Welcome to Chekzstore, the home of alluring and confidence-inspiring
+          fragrances. We believe that perfume is not just a scent, but also a
+          subtle and meaningful form of self-expression. Through a wide
+          selection of scents, we help you find a signature fragrance that
+          represents your character and lifestyle.
         </p>
         <p>
-          Chekzstore hadir dengan komitmen untuk menyediakan produk parfum
-          berkualitas tinggi, asli, dan terjangkau. Setiap parfum yang kami
-          tawarkan telah dipilih secara cermat agar memenuhi selera beragam
-          pelanggan, baik pria maupun wanita, dari aroma floral yang lembut
-          hingga aroma woody yang maskulin.
+          Chekzstore is here with a commitment to providing high quality,
+          authentic and affordable perfume products. Each perfume we offer has
+          been carefully selected to meet the diverse tastes of customers, both
+          men and women, from soft floral scents to masculine woody scents.
         </p>
         <p>
-          Kami percaya bahwa pengalaman berbelanja parfum harus menyenangkan dan
-          mudah. Oleh karena itu, kami tidak hanya fokus pada kualitas produk,
-          tetapi juga memberikan pelayanan pelanggan yang ramah, pengemasan
-          aman, dan pengiriman cepat ke seluruh Indonesia.
+          We believe that the perfume shopping experience should be fun and
+          easy. Therefore, we not only focus on product quality, but also
+          provide friendly customer service, secure packaging, and fast shipping
+          throughout Indonesia.
         </p>
         <p>
-          Chekzstore bukan sekadar toko, melainkan bagian dari gaya hidup Anda.
-          Kami ingin setiap aroma yang Anda pilih dari Chekzstore mampu
-          meninggalkan kesan mendalam dan meningkatkan rasa percaya diri Anda
-          dalam setiap kesempatan.
+          Chekzstore is not just a store, it's part of your lifestyle. We want
+          every scent you choose from Chekzstore to leave a lasting impression
+          and boost your confidence in every occasion.
         </p>
         <p>
-          Terima kasih telah mempercayai Chekzstore sebagai sahabat aroma
-          pilihan Anda. Jelajahi koleksi kami dan temukan wewangian yang paling
-          mencerminkan siapa Anda.
+          To keep you in the loop with the latest trends and seasonal launches,
+          we regularly share tips and insights through our blog and social media
+          channels. From advice on layering scents and selecting the perfect
+          perfume for any occasion to expert guidance on bottle care for lasting
+          freshness, we equip you with everything you need to elevate your
+          fragrance knowledge.
+        </p>
+        <p>
+          Join our loyalty program today and enjoy exclusive benefits, including
+          special discounts, early access to limited-edition releases, and
+          personalized fragrance recommendations based on your preferences.
+          We're dedicated to making your perfume journey not only memorable but
+          also rewarding and uniquely yours.
+        </p>
+        <p>
+          Thank you for trusting Chekzstore as your scent buddy of choice.
+          Explore our collection and find the fragrance that best reflects who
+          you are.
         </p>
       </div>
     </section>
@@ -174,17 +198,20 @@
     <!-- Footer Start -->
     <footer class="footer-container">
       <div class="socials">
-        <a href="#">
+        <a
+          href="https://instagram.com/sywaall_"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg class="instagram">
             <use href="assets/img/feather-sprite.svg#instagram" />
           </svg>
         </a>
-        <a href="#">
-          <svg class="twitter">
-            <use href="assets/img/feather-sprite.svg#twitter" />
-          </svg>
-        </a>
-        <a href="#">
+        <a
+          href="https://facebook.com/sya.047"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg class="facebook">
             <use href="assets/img/feather-sprite.svg#facebook" />
           </svg>
@@ -199,7 +226,7 @@
       </div>
 
       <div class="credit">
-        <p>&copy; 2025 Chekzstore. Hak cipta dilindungi.</p>
+        <p>&copy; 2025 Chekzstore. All Rights Reserved.</p>
       </div>
     </footer>
     <!-- Footer End -->

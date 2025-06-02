@@ -39,7 +39,7 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search">
+        <a href="#" id="search-button">
           <svg class="search">
             <use href="assets/img/feather-sprite.svg#search" />
           </svg>
@@ -77,9 +77,9 @@
             </div>
           </template>
           <div class="cart-empty" x-show="!$store.cart.items.length">
-            <h3>Keranjang Kosong</h3>
+            <h3>Cart is Empty</h3>
             <a href="#product" class="btn-continue" id="continue-button">
-              Mulai Belanja
+              Start Shopping
             </a>
           </div>
           <div class="cart-full" x-show="$store.cart.items.length">
@@ -128,12 +128,23 @@
           </svg>
         </a>
       </div>
+
+      <!-- Search Form Start -->
+      <div class="search-form">
+        <input type="search" id="search-box" placeholder="search here..." />
+        <label for="search-box">
+          <svg class="search">
+            <use href="assets/img/feather-sprite.svg#search" />
+          </svg>
+        </label>
+      </div>
+      <!-- Search Form End -->
     </nav>
     <!-- Navbar End -->
 
     <!-- Contact Section Start -->
     <section class="contact" id="contact">
-      <h2>Kontak Kami</h2>
+      <h2>Contact Us</h2>
       <p>
         Call or Whatsapp:
         <a href="https://wa.me/6282337470568" target="_blank"
@@ -143,12 +154,12 @@
 
       <form class="contact-form" action="#" method="post">
         <div class="form-row">
-          <input type="text" placeholder="Nama" required />
-          <input type="email" placeholder="Email *" required />
+          <input type="text" placeholder="Name" required />
+          <input type="email" placeholder="Email" required />
         </div>
-        <input type="number" placeholder="Nomor telepon" />
-        <textarea rows="5" placeholder="Komentar"></textarea>
-        <button type="submit">Kirim</button>
+        <input type="number" placeholder="Phone" />
+        <textarea rows="5" placeholder="Comment"></textarea>
+        <button type="submit">Send</button>
       </form>
     </section>
     <!-- Contact Section End -->
@@ -156,17 +167,20 @@
     <!-- Footer Start -->
     <footer class="footer-container">
       <div class="socials">
-        <a href="#">
+        <a
+          href="https://instagram.com/sywaall_"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg class="instagram">
             <use href="assets/img/feather-sprite.svg#instagram" />
           </svg>
         </a>
-        <a href="#">
-          <svg class="twitter">
-            <use href="assets/img/feather-sprite.svg#twitter" />
-          </svg>
-        </a>
-        <a href="#">
+        <a
+          href="https://facebook.com/sya.047"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <svg class="facebook">
             <use href="assets/img/feather-sprite.svg#facebook" />
           </svg>
@@ -181,7 +195,7 @@
       </div>
 
       <div class="credit">
-        <p>&copy; 2025 Chekzstore. Hak cipta dilindungi.</p>
+        <p>&copy; 2025 Chekzstore. All Rights Reserved.</p>
       </div>
     </footer>
     <!-- Footer End -->

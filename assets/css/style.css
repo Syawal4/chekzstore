@@ -107,6 +107,45 @@ html {
   stroke-linejoin: round;
 }
 
+.navbar .search-form {
+  position: absolute;
+  top: 100%;
+  right: 7%;
+  background-color: #fff;
+  width: 50rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.3s ease;
+}
+
+.navbar .search-form.active {
+  transform: scaleY(1);
+}
+
+.navbar .search-form #search-box {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  color: var(--black);
+  padding: 1rem;
+}
+
+.navbar .search-form label .search {
+  width: 2rem;
+  height: 2rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  cursor: pointer;
+  margin-right: 1.5rem;
+  color: var(--black);
+}
+
 #shopping-cart-button {
   position: relative;
 }
@@ -136,7 +175,8 @@ html {
   color: var(--blue-font);
   overflow-y: auto;
   overflow-x: hidden;
-  transition: transform 0.3s ease;
+  transform-origin: right;
+  transition: 0.3s ease;
   height: calc(100vh - 6rem);
 }
 
@@ -634,6 +674,11 @@ html {
 
 /* Contact section */
 .contact {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  flex: 1;
   padding-top: 8rem;
   padding-bottom: 1.4rem;
 }
@@ -806,6 +851,11 @@ footer {
 
   .navbar .navbar-menu a:hover::after {
     transform: scaleX(0.2);
+  }
+
+  .navbar .search-form {
+    width: 90%;
+    right: 2rem;
   }
 
   .home {
