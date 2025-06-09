@@ -437,14 +437,15 @@ document.addEventListener("alpine:init", () => {
 const checkoutButton = document.querySelector(".checkout-button");
 checkoutButton.disabled = true;
 
-const checkoutForm = document.querySelector("#checkoutForm");
+const form = document.querySelector("#checkoutForm");
 
-checkoutForm.addEventListener("input", function () {
+form.addEventListener("input", function () {
   const name = document.getElementById("name").value.trim();
   const email = document.getElementById("email").value.trim();
   const phone = document.getElementById("phone").value.trim();
+  const address = document.getElementById("address").value.trim();
 
-  if (name && email && phone) {
+  if (name && email && phone && address) {
     checkoutButton.classList.remove("disabled");
     checkoutButton.disabled = false;
   } else {
@@ -452,6 +453,47 @@ checkoutForm.addEventListener("input", function () {
     checkoutButton.disabled = true;
   }
 });
+
+checkoutButton.addEventListener("click", function (e) {
+  e.preventDefault();
+  const formData = new FormData(form);
+  const data = new URLSearchParams(formData);
+  const objData = Object.fromEntries(data);
+  const message = formatMessage(objData);
+  window.open("http://wa.me/6282337470568?text=" + encodeURIComponent(message));
+  sessionStorage.setItem("checkoutSuccess", "1");
+  window.location.reload();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  if (sessionStorage.getItem("checkoutSuccess") === "1") {
+    // Tampilkan notifikasi sukses
+    const notif = document.createElement("div");
+    notif.className = "success-notif";
+    notif.innerText = "Your order was successful! Thank you for shopping.";
+    document.body.prepend(notif);
+
+    // Hapus flag supaya notifikasi hanya sekali
+    sessionStorage.removeItem("checkoutSuccess");
+
+    // Notifikasi hilang setelah beberapa detik:
+    setTimeout(() => notif.remove(), 10000);
+  }
+});
+
+const formatMessage = (obj) => {
+  return `Data Customer
+    Nama: ${obj.name}
+    Email: ${obj.email}
+    No HP: ${obj.phone}
+    Alamat: ${obj.address}
+  Data Pesanan
+  ${JSON.parse(obj.items).map(
+    (item) => `${item.name} (${item.quantity} x ${rupiah(item.total)}) \n`
+  )}
+  Total: ${rupiah(obj.total)}
+  Terima kasih.`;
+};
 
 // Mata uang rupiah
 const rupiah = (number) => {
