@@ -39,11 +39,11 @@
       </div>
 
       <div class="navbar-extra">
-        <a href="#" id="search-button">
+        <!-- <a href="#" id="search-button">
           <svg class="search">
             <use href="assets/img/feather-sprite.svg#search" />
           </svg>
-        </a>
+        </a> -->
         <a href="#" id="shopping-cart-button">
           <svg class="cart">
             <use href="assets/img/feather-sprite.svg#shopping-cart" />
@@ -55,6 +55,7 @@
           ></span>
         </a>
 
+        <!-- Shopping Cart Start -->
         <div class="shopping-cart">
           <template x-for="(item, index) in $store.cart.items" :key="index">
             <div class="cart-item">
@@ -139,6 +140,7 @@
             </div>
           </div>
         </div>
+        <!-- Shopping Cart Start -->
 
         <a href="#" id="menu-button">
           <svg class="menu">
@@ -148,14 +150,14 @@
       </div>
 
       <!-- Search Form Start -->
-      <div class="search-form">
+      <!-- <div class="search-form">
         <input type="search" id="search-box" placeholder="search here..." />
         <label for="search-box">
           <svg class="search">
             <use href="assets/img/feather-sprite.svg#search" />
           </svg>
         </label>
-      </div>
+      </div> -->
       <!-- Search Form End -->
     </nav>
     <!-- Navbar End -->
