@@ -460,7 +460,7 @@ checkoutButton.addEventListener("click", function (e) {
   const data = new URLSearchParams(formData);
   const objData = Object.fromEntries(data);
   const message = formatMessage(objData);
-  window.open("http://wa.me/6282337470568?text=" + encodeURIComponent(message));
+  window.open("http://wa.me/6285136413252?text=" + encodeURIComponent(message));
   sessionStorage.setItem("checkoutSuccess", "1");
   window.location.reload();
 });
